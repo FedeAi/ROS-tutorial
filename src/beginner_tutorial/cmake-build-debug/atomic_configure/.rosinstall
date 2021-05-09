@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/federico/tutorial_ws/src/beginner_tutorial/cmake-build-debug/devel/setup.sh
