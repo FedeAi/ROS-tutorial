@@ -3,8 +3,6 @@
 //
 
 #include "beginner_tutorial/BeginnerTutorial.h"
-#include <opencv2/imgproc/imgproc.hpp>
-#include <opencv2/highgui/highgui.hpp>
 
 BeginnerTutorial::BeginnerTutorial(ros::NodeHandle &nodeHandle) : nodeHandle_(nodeHandle) {
     if (!readParameters()) {
@@ -13,7 +11,7 @@ BeginnerTutorial::BeginnerTutorial(ros::NodeHandle &nodeHandle) : nodeHandle_(no
 
     subscriber_ = nodeHandle_.subscribe(subscriberTopic_, 1, &BeginnerTutorial::topicCallback, this);
     publisher_ = nodeHandle_.advertise<sensor_msgs::Image>("out_image",1);
-
+    customMessagePublisher_ = nodeHandle_.advertise<beginner_tutorial::CustomMessage>("customMessage",1);
     ROS_INFO("Succesfully launched node.");
 }
 
@@ -59,6 +57,23 @@ void BeginnerTutorial::topicCallback(const sensor_msgs::ImageConstPtr &msg) {
     img_bridge_1.toImageMsg(image_ros);
 
     publisher_.publish(image_ros);
+
+
+    // PUBLISHING OUT CUSTOM MESSAGE
+
+    beginner_tutorial::CustomMessage my_custom_message;
+    my_custom_message.header.stamp = ros::Time::now();
+
+    my_custom_message.im_true = true;
+    auto means = cv::mean(cv_ptr->image);
+    my_custom_message.means[0] = means[0];
+    my_custom_message.means[1] = means[1];
+    my_custom_message.means[2] = means[2];
+    my_custom_message.means[3] = means[3];
+
+    customMessagePublisher_.publish(my_custom_message);
+
+
 }
 
 //Easy function

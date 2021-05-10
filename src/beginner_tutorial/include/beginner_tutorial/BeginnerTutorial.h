@@ -12,7 +12,10 @@
 #include "opencv2/imgproc.hpp"
 #include "opencv2/highgui.hpp"
 
-#include <cv_bridge/cv_bridge.h>
+#include <cv_bridge/cv_bridge.h>                // bridge between ros and opencv
+#include <image_transport/image_transport.h>    // used to convert compressed images
+
+#include <beginner_tutorial/CustomMessage.h>
 
 class BeginnerTutorial {
 public:
@@ -40,6 +43,7 @@ private:
 
     //! ROS topic publisher.
     ros::Publisher publisher_;
+    ros::Publisher customMessagePublisher_;
 
     //! ROS topic name to subscribe to.
     std::string subscriberTopic_;

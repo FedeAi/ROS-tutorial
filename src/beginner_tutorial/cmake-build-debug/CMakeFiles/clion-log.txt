@@ -39,6 +39,8 @@ CMake Deprecation Warning at /usr/src/googletest/googletest/CMakeLists.txt:48 (c
 -- Using Python nosetests: /usr/bin/nosetests-2.7
 -- catkin 0.7.29
 -- BUILD_SHARED_LIBS is on
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- beginner_tutorial: 1 messages, 0 services
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/federico/tutorial_ws/src/beginner_tutorial/cmake-build-debug

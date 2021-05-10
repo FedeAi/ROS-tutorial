@@ -134,7 +134,43 @@ file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/federico/tutorial_w
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beginner_tutorial/msg" TYPE FILE FILES "/home/federico/tutorial_ws/src/beginner_tutorial/msg/CustomMessage.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beginner_tutorial/cmake" TYPE FILE FILES "/home/federico/tutorial_ws/src/beginner_tutorial/cmake-build-debug/catkin_generated/installspace/beginner_tutorial-msg-paths.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/federico/tutorial_ws/src/beginner_tutorial/cmake-build-debug/devel/include/beginner_tutorial")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/federico/tutorial_ws/src/beginner_tutorial/cmake-build-debug/devel/share/roseus/ros/beginner_tutorial")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/federico/tutorial_ws/src/beginner_tutorial/cmake-build-debug/devel/share/common-lisp/ros/beginner_tutorial")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/federico/tutorial_ws/src/beginner_tutorial/cmake-build-debug/devel/share/gennodejs/ros/beginner_tutorial")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/federico/tutorial_ws/src/beginner_tutorial/cmake-build-debug/devel/lib/python2.7/dist-packages/beginner_tutorial")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/federico/tutorial_ws/src/beginner_tutorial/cmake-build-debug/devel/lib/python2.7/dist-packages/beginner_tutorial")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/federico/tutorial_ws/src/beginner_tutorial/cmake-build-debug/catkin_generated/installspace/beginner_tutorial.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beginner_tutorial/cmake" TYPE FILE FILES "/home/federico/tutorial_ws/src/beginner_tutorial/cmake-build-debug/catkin_generated/installspace/beginner_tutorial-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

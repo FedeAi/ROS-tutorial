@@ -3,6 +3,6 @@ prefix=/home/federico/tutorial_ws/src/beginner_tutorial/cmake-build-debug/devel
 Name: beginner_tutorial
 Description: Description of beginner_tutorial
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/federico/tutorial_ws/src/beginner_tutorial/cmake-build-debug/devel/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: roscpp sensor_msgs std_msgs message_generation
