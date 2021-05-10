@@ -5,12 +5,12 @@
 #include "beginner_tutorial/BeginnerTutorial.h"
 
 BeginnerTutorial::BeginnerTutorial(ros::NodeHandle &nodeHandle) : nodeHandle_(nodeHandle) {
-    if (!readParameters()) {
+    if (readParameters()) {
         ROS_ERROR("Could not read parameters.");
     }
 
     subscriber_ = nodeHandle_.subscribe(subscriberTopic_, 1, &BeginnerTutorial::topicCallback, this);
-    publisher_ = nodeHandle_.advertise<sensor_msgs::Image>("out_image",1);
+    publisher_ = nodeHandle_.advertise<sensor_msgs::Image>(publisherTopicCanny_,1);
     customMessagePublisher_ = nodeHandle_.advertise<beginner_tutorial::CustomMessage>("customMessage",1);
     ROS_INFO("Succesfully launched node.");
 }
@@ -84,8 +84,10 @@ bool BeginnerTutorial::readParameters() {
 }
  */
 bool BeginnerTutorial::readParameters() {
-    bool hasFailed;
+    bool hasFailed = false;
     subscriberTopic_ = getRequiredRosParam<std::string, std::string>(nodeHandle_, "subsciber_topic", "/camera_1",
                                                                      hasFailed);
-    return true;
+    publisherTopicCanny_ = getRequiredRosParam<std::string, std::string>(nodeHandle_, "image_publisher_topic", "/my_canny",
+                                                                         hasFailed);
+    return hasFailed;
 }

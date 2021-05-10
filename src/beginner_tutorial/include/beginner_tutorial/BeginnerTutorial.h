@@ -45,8 +45,9 @@ private:
     ros::Publisher publisher_;
     ros::Publisher customMessagePublisher_;
 
-    //! ROS topic name to subscribe to.
+    //! ROS topic names
     std::string subscriberTopic_;
+    std::string publisherTopicCanny_;
 
     template<typename T1, typename T2>
     T2 getRequiredRosParam(ros::NodeHandle nh, std::string paramName,

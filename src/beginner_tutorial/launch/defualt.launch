@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+        <node pkg="beginner_tutorial" name="beginner_tutorial_node" type="beginner_tutorial_node"  output="screen" >
+            <rosparam command="load" file="$(find beginner_tutorial)/config/default.yaml" />
+
+            <!-- Overlay parameters if user specified them. They must be loaded after default parameters! -->
+            <!--<rosparam command="load" file="$(find dynamis_common_meta)/config/global_params.yaml" /> -->
+        </node>
+</launch>

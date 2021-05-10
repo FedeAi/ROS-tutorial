@@ -155,4 +155,5 @@ CMakeFiles/beginner_tutorial_node.dir/src/beginner_tutorial_node.cpp.o: /opt/ros
 CMakeFiles/beginner_tutorial_node.dir/src/beginner_tutorial_node.cpp.o: /opt/ros/melodic/include/std_msgs/Header.h
 CMakeFiles/beginner_tutorial_node.dir/src/beginner_tutorial_node.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
 CMakeFiles/beginner_tutorial_node.dir/src/beginner_tutorial_node.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
+CMakeFiles/beginner_tutorial_node.dir/src/beginner_tutorial_node.cpp.o: devel/include/beginner_tutorial/CustomMessage.h
 

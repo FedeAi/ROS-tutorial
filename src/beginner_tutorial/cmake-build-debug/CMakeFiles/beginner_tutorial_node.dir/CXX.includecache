@@ -28,6 +28,12 @@ beginner_tutorial/CustomMessage.h
 beginner_tutorial/BeginnerTutorial.h
 /home/federico/tutorial_ws/src/beginner_tutorial/src/beginner_tutorial/BeginnerTutorial.h
 
+/home/federico/tutorial_ws/src/beginner_tutorial/src/beginner_tutorial_node.cpp
+ros/ros.h
+-
+beginner_tutorial/BeginnerTutorial.h
+/home/federico/tutorial_ws/src/beginner_tutorial/src/beginner_tutorial/BeginnerTutorial.h
+
 /opt/ros/melodic/include/cv_bridge/cv_bridge.h
 sensor_msgs/Image.h
 -
