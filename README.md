@@ -34,30 +34,35 @@ target_link_libraries(${PROJECT_NAME}_node
         ${catkin_LIBRARIES}
         ${OpenCV_LIBRARIES}
 )
+```
 
-
+##### Custom Message
+```
 add_message_files(
    FILES
    CustomMessage.msg
 #   Message2.msg
 )
+```
 
 -> in find_package message_generation
 -> in pck.xml message_generation
 
+```
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES beginner_tutorial
   CATKIN_DEPENDS roscpp sensor_msgs std_msgs message_generation
 #  DEPENDS system_lib
 )
-
-
 ```
 
 
-#### Launching
 
+
+
+#### Launching
+```
 roscore
 rosbag play bag.bag -l -r 0.2
 
@@ -65,7 +70,16 @@ rosbag play bag.bag -l -r 0.2
 rosrun image_transport republish compressed in:=camera_1  raw out:=camera_1
 
 
-plotjuggler
+plotjuggler  // right now I can't see ROS publishers
+```
+
+#### Launch files
+
+In launch folder
+
+
+#### Configuration file
+In config folder
 
 
 
