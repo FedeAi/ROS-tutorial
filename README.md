@@ -37,24 +37,34 @@ target_link_libraries(${PROJECT_NAME}_node
 ```
 
 ##### Custom Message
+-> in find_package
 ```
 add_message_files(
    FILES
    CustomMessage.msg
 #   Message2.msg
 )
-```
 
--> in find_package message_generation
--> in pck.xml message_generation
-
-```
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES beginner_tutorial
   CATKIN_DEPENDS roscpp sensor_msgs std_msgs message_generation
 #  DEPENDS system_lib
 )
+
+find_package(catkin REQUIRED COMPONENTS
+      roscpp
+      .....
+      message_generation
+)
+
+```
+
+-> in package.xml 
+
+```
+<build_depend>message_generation</build_depend>
+<exec_depend>message_runtime</exec_depend>
 ```
 
 
