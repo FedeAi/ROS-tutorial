@@ -56,7 +56,7 @@ private:
 
         if (!nh.getParam(paramName, var)) {
             has_failed = true;
-            fprintf(stderr, "%s \n", paramName.c_str());
+            fprintf(stderr, "%s: ", paramName.c_str());
             fprintf(stderr, "using default value \n");
         }
 
